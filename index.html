@@ -3,13 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Timer Decrementale</title>
+  <title>Decremental Timer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>⏱️ Timer Decrementale</h1>
-  <div id="timer">30</div>
-  <button id="startBtn">Avvia Timer</button>
+  <h1>⏱️ Decremental Timer</h1>
+
+  <div class="container">
+    <div>
+      <label for="decrement">Decrement</label> </br>
+      <input type="number" id="decrement" value="1" min="1" max="999" />
+    </div>
+    <div>
+      <label for="rounds" id="rounds_label">Rounds</label> </br>
+      <input type="number" id="rounds" value="10" min="1" max="999" />
+    </div>
+    <div>
+      <label for="timer" id="timer_label">Time</label> </br>
+      <input type="number" id="timer" value="30" min="1" max="999" />
+    </div>
+  </div>
+  <br>
+  <div>  
+    <button id="startBtn">Start Timer</button>
+    <button id="resetBtn">Stop / Reset</button>
+  </div>
+
+  <!-- Suono: un semplice beep -->
+  <audio id="beepSound" src="timer.mp3" preload="auto"></audio>
   <script src="script.js"></script>
 </body>
 </html>

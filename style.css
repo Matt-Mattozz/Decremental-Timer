@@ -5,13 +5,38 @@ body {
   background: #f7f7f7;
 }
 
-#timer {
-  font-size: 5rem;
-  margin: 20px;
-}
-
 button {
   padding: 10px 20px;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+input[type="number"] {
+  width: 200px;
+  font-size: 5rem;
+  margin: 20px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  justify-content: center; /* allinea orizzontalmente al centro */
+  align-items: center;     /* allinea verticalmente al centro */
+}
+.container > div {
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+/* Nascondere freccine in Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Nascondere freccine in Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
